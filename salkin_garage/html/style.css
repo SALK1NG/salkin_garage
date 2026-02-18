@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+* { box-sizing: border-box; outline: none; }
+body { font-family: 'Inter', sans-serif; background: transparent; overflow: hidden; display: none; margin: 0; }
+
+#main-container { width: 1920px; height: 1080px; position: relative; }
+
+/* Garage Card Rechts */
+.garage-card {
+    width: 281px; height: 428px;
+    position: absolute; left: 1622.5px; top: 243.5px;
+    background-color: black; border-radius: 5px;
+    display: flex; flex-direction: column; padding: 15px;
+}
+
+.header-container { display: flex; align-items: center; margin-top: 5px; margin-bottom: 10px; }
+.badge-menu {
+    width: 50px; height: 17px; background-color: white; border-radius: 2px;
+    color: black; font-size: 11px; font-weight: 900; text-align: center; line-height: 17px;
+    margin-right: 12px;
+}
+.title-text { color: white; font-size: 16px; font-weight: 900; margin: 0; }
+.divider { width: 281px; height: 2px; background-color: white; position: absolute; left: 0; top: 46px; }
+
+#search {
+    width: 251px; height: 41px; background-color: #2b2b2b; border: 1px solid white;
+    border-radius: 5px; color: white; font-weight: 900; padding: 0 15px;
+    margin-top: 25px; margin-bottom: 10px; align-self: center;
+}
+#search::placeholder { color: #626262; }
+
+#vehicle-list { flex-grow: 1; overflow-y: auto; display: flex; flex-direction: column; align-items: center; }
+#vehicle-list::-webkit-scrollbar { width: 0; }
+
+.vehicle-item {
+    width: 251px; height: 41px; background-color: #2b2b2b; border: 1px solid white;
+    border-radius: 5px; color: white; font-weight: 900; text-align: center;
+    line-height: 41px; margin-bottom: 8px; cursor: pointer; text-transform: uppercase; font-size: 13px;
+}
+.vehicle-item:hover { background-color: rgba(255,255,255,0.05); }
+.vehicle-item.selected { background-color: white; color: black; }
+
+#close-btn {
+    width: 250px; height: 41px; background-color: #ff4832; border-radius: 5px;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    align-self: center; box-shadow: 3px 3px 3.8px 0 rgba(255,0,0,0.25);
+}
+.close-text { color: white; font-size: 16px; font-weight: 900; margin: 0; }
+
+/* Parkout Unten Mitte */
+.footer-container {
+    position: absolute; left: 50%; bottom: 80px; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; width: 400px;
+}
+#help-text { color: white; font-size: 13px; font-weight: 900; margin-bottom: 15px; text-align: center; text-transform: uppercase; }
+
+#parkout-btn {
+    width: 300px; height: 67px; background-color: #28ff95; border-radius: 5px;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 20px rgba(40,255,149,0.3);
+}
+.parkout-text { color: white; font-size: 20px; font-weight: 900; margin: 0; text-transform: uppercase; }
